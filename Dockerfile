@@ -4,7 +4,7 @@ LABEL org.opencontainers.image.source https://github.com/vemonet/github-actions-
 USER root
 RUN chown -R $UID:$GID /opt
 
-USER $UID
+# USER $UID
 
 # Install conda
 ENV CONDA_DIR=/opt/conda \

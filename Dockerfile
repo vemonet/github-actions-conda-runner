@@ -4,6 +4,8 @@ LABEL org.opencontainers.image.source https://github.com/vemonet/github-actions-
 USER root
 RUN chown -R $UID:$GID /opt
 
+RUN sed -i "s/\.\/uid\.sh/#.\/uid.sh/g" /home/${USERNAME}/entrypoint.sh
+
 # USER $UID
 
 # Install conda
